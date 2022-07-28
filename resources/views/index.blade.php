@@ -38,7 +38,7 @@
                             </div>
                         </div>
 
-                        <div class="row">
+                        <div class="row d-none">
                             <div class="col-lg-12 mt-3">
                                 <a class="btn btn-success add-input">Добавить еще <i class="bi-plus-circle me-2"></i></a>
                             </div>

@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\EmployeeController;
+use App\Http\Controllers\MailController;
 
 /*
 |--------------------------------------------------------------------------
@@ -18,3 +19,4 @@ Route::get('/', [EmployeeController::class, 'index']);
 Route::post('/store', [EmployeeController::class, 'store'])->name('store');
 Route::get('/fetchall', [EmployeeController::class, 'fetchAll'])->name('fetchAll');
 
+Route::get('send',[MailController::class, 'send']);

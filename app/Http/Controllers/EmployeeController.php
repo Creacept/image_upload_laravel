@@ -56,9 +56,8 @@ class EmployeeController extends Controller {
         $file = $request->file('avatar');
         $fileName = time() . '.' . $file->getClientOriginalExtension();
         $file->storeAs('public/images', $fileName);
-        $empData = ['title' => $fileName,'avatar' => $fileName,'file_size' => filesize($file)];
+        $empData = ['title' => $request->fname,'avatar' => $fileName,'file_size' => filesize($file)];
         Employee::create($empData);
-        Mail::to('smtp.mailtrap.io')->send(new ImagesMail);
         return response()->json([
             'status' => 200,
         ]);
